@@ -63,7 +63,7 @@ function setupNavigation() {
         const currentStep = getCurrentStep();
         
         if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-            if (currentStep < 12) {
+            if (currentStep < 11) {
                 navigateToStep(currentStep + 1);
             }
         } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
@@ -152,7 +152,7 @@ function showActiveSection() {
     // Check if there's a step in the URL hash
     if (window.location.hash && window.location.hash.includes('step')) {
         const step = parseInt(window.location.hash.replace('#step', ''));
-        if (!isNaN(step) && step >= 1 && step <= 12) {
+        if (!isNaN(step) && step >= 1 && step <= 11) {
             navigateToStep(step);
             return;
         }
@@ -179,10 +179,8 @@ function setupInteractiveElements() {
     // Step 3: Draggable resources
     setupDraggableResources();
     
-    // Step 4: Trade-off sliders
-    setupTradeoffSliders();
-    
-    // Additional interactive elements for other steps would be set up here
+    // Add image loading handling
+    setupImageLoading();
 }
 
 /**
@@ -328,15 +326,35 @@ function setupDraggableResources() {
 }
 
 /**
- * Set up trade-off sliders for Step 4
- * Simplified version - full implementation in tradeoffs.js
+ * Set up image loading and error handling
  */
-function setupTradeoffSliders() {
-    // This is a placeholder - the actual implementation is in tradeoffs.js
-    // This function is here to ensure all interactive elements are initialized in one place
-    if (typeof window.initTradeoffSliders === 'function') {
-        window.initTradeoffSliders();
-    }
+function setupImageLoading() {
+    const images = document.querySelectorAll('.step-image');
+    
+    images.forEach(img => {
+        // Add loading state
+        img.addEventListener('loadstart', () => {
+            img.style.opacity = '0';
+        });
+        
+        // Handle successful load
+        img.addEventListener('load', () => {
+            img.style.opacity = '1';
+            img.style.transition = 'opacity 0.3s ease-in-out';
+        });
+        
+        // Handle load error
+        img.addEventListener('error', () => {
+            console.error(`Failed to load image: ${img.src}`);
+            // Try alternative path
+            const currentSrc = img.src;
+            if (currentSrc.startsWith('/AMEfinal/')) {
+                img.src = currentSrc.replace('/AMEfinal/', './');
+            } else if (currentSrc.startsWith('./')) {
+                img.src = currentSrc.replace('./', '/AMEfinal/');
+            }
+        });
+    });
 }
 
 /**
@@ -421,4 +439,4 @@ function animateStepSections() {
             }
         });
     });
-}
+} 
