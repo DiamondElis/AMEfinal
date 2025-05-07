@@ -205,7 +205,206 @@
             </div>
         </section>
 
-        <!-- Remaining sections would be added here -->
+                <!-- Step 4: Understanding Trade-offs -->
+        <section id="step4" class="step-section" data-step="4">
+            <div class="step-content">
+                <h2>4. Understanding Trade-offs</h2>
+                <p>Every design decision comes with pros and cons. Let’s visualize the trade-offs between cost, performance, and safety.</p>
+                <div class="interactive-content">
+                    <div class="tradeoff-container">
+                        <img src="assets/images/step4.webp" alt="Trade-offs diagram" class="step-image">
+                        <!-- add hotspots or sliders here if needed -->
+                    </div>
+                    <div class="content-box">
+                        <h3>Key Trade-offs</h3>
+                        <ul>
+                            <li>Speed vs. energy consumption</li>
+                            <li>Cost vs. durability</li>
+                            <li>Simplicity vs. flexibility</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step-nav">
+                    <button class="prev-step-btn" data-prev="3">Previous: Resource Gathering</button>
+                    <button class="next-step-btn" data-next="5">Next: Defining Architecture</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 5: Defining Architecture -->
+        <section id="step5" class="step-section" data-step="5">
+            <div class="step-content">
+                <h2>5. Defining Architecture</h2>
+                <p>Now we map out the high-level components and their interactions in our elevator system.</p>
+                <div class="interactive-content">
+                    <div class="architecture-container">
+                        <img src="assets/images/step5.webp" alt="System architecture" class="step-image">
+                    </div>
+                    <div class="content-box">
+                        <h3>Architecture Layers</h3>
+                        <ul>
+                            <li>Physical layer (motors, pulleys)</li>
+                            <li>Control layer (processors, PLCs)</li>
+                            <li>User interface layer (buttons, displays)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step-nav">
+                    <button class="prev-step-btn" data-prev="4">Previous: Understanding Trade-offs</button>
+                    <button class="next-step-btn" data-next="6">Next: Abstraction Layers</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 6: Abstraction Layers -->
+        <section id="step6" class="step-section" data-step="6">
+            <div class="step-content">
+                <h2>6. Abstraction Layers</h2>
+                <p>We introduce abstractions so each layer only needs to know what it cares about, hiding lower-level details.</p>
+                <div class="interactive-content">
+                    <div class="abstraction-container">
+                        <img src="assets/images/step6.webp" alt="Abstraction layers" class="step-image">
+                    </div>
+                    <div class="content-box">
+                        <h3>Layer Responsibilities</h3>
+                        <ul>
+                            <li>Hardware abstraction</li>
+                            <li>Control logic</li>
+                            <li>User commands</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step-nav">
+                    <button class="prev-step-btn" data-prev="5">Previous: Defining Architecture</button>
+                    <button class="next-step-btn" data-next="7">Next: Open/Closed Principle</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 7: Open/Closed Principle -->
+        <section id="step7" class="step-section" data-step="7">
+            <div class="step-content">
+                <h2>7. Open/Closed Principle</h2>
+                <p>Design modules that are open for extension but closed for modification.</p>
+                <div class="interactive-content">
+                    <div class="ocp-container">
+                        <img src="assets/images/step7.webp" alt="Open/Closed principle diagram" class="step-image">
+                    </div>
+                    <div class="content-box">
+                        <h3>OCP in Practice</h3>
+                        <ul>
+                            <li>Base elevator class</li>
+                            <li>Extend with new door types</li>
+                            <li>No changes to existing code</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step-nav">
+                    <button class="prev-step-btn" data-prev="6">Previous: Abstraction Layers</button>
+                    <button class="next-step-btn" data-next="8">Next: Breaking Down Components</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 8: Breaking Down Components -->
+        <section id="step8" class="step-section" data-step="8">
+            <div class="step-content">
+                <h2>8. Breaking Down Components</h2>
+                <p>Decompose the system into smaller, testable parts.</p>
+                <div class="interactive-content">
+                    <div class="decomposition-container">
+                        <img src="assets/images/step8.webp" alt="Component breakdown" class="step-image">
+                    </div>
+                    <div class="content-box">
+                        <h3>Sub-systems</h3>
+                        <ul>
+                            <li>Motor control</li>
+                            <li>Safety interlocks</li>
+                            <li>Passenger interface</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step-nav">
+                    <button class="prev-step-btn" data-prev="7">Previous: Open/Closed Principle</button>
+                    <button class="next-step-btn" data-next="9">Next: Feedback Loops</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 9: Feedback Loops -->
+        <section id="step9" class="step-section" data-step="9">
+            <div class="step-content">
+                <h2>9. Feedback Loops</h2>
+                <p>Implement feedback so the system can adjust in real time.</p>
+                <div class="interactive-content">
+                    <div class="feedback-container">
+                        <img src="assets/images/step9.webp" alt="Feedback loops" class="step-image">
+                    </div>
+                    <div class="content-box">
+                        <h3>Loop Examples</h3>
+                        <ul>
+                            <li>Position sensors → motor speed</li>
+                            <li>Load sensors → safety thresholds</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step-nav">
+                    <button class="prev-step-btn" data-prev="8">Previous: Breaking Down Components</button>
+                    <button class="next-step-btn" data-next="10">Next: Iteration</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 10: Iteration -->
+        <section id="step10" class="step-section" data-step="10">
+            <div class="step-content">
+                <h2>10. Iteration</h2>
+                <p>Continuously refine your design based on testing and feedback.</p>
+                <div class="interactive-content">
+                    <div class="iteration-container">
+                        <img src="assets/images/step10.webp" alt="Iteration cycle" class="step-image">
+                    </div>
+                    <div class="content-box">
+                        <h3>Iteration Steps</h3>
+                        <ul>
+                            <li>Prototype → test → analyze</li>
+                            <li>Identify improvements</li>
+                            <li>Repeat</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step-nav">
+                    <button class="prev-step-btn" data-prev="9">Previous: Feedback Loops</button>
+                    <button class="next-step-btn" data-next="11">Next: Encapsulation</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 11: Encapsulation -->
+        <section id="step11" class="step-section" data-step="11">
+            <div class="step-content">
+                <h2>11. Encapsulation</h2>
+                <p>Hide internals and expose only what’s necessary.</p>
+                <div class="interactive-content">
+                    <div class="encapsulation-container">
+                        <img src="assets/images/step11.webp" alt="Encapsulation principle" class="step-image">
+                    </div>
+                    <div class="content-box">
+                        <h3>Encapsulation Benefits</h3>
+                        <ul>
+                            <li>Reduced coupling</li>
+                            <li>Improved maintainability</li>
+                            <li>Clear module boundaries</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step-nav">
+                    <button class="prev-step-btn" data-prev="10">Previous: Iteration</button>
+                    <button class="next-step-btn" data-next="1">Restart Journey</button>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Citations & Resources Section -->
