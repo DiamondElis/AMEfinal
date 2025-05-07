@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/tradeoffs.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Roboto:wght@300;400&family=Source+Code+Pro&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -24,9 +25,10 @@
             <li data-step="6"><span>6</span><div class="tooltip">Abstraction Layers</div></li>
             <li data-step="7"><span>7</span><div class="tooltip">Open/Closed</div></li>
             <li data-step="8"><span>8</span><div class="tooltip">Breaking Down</div></li>
-            <li data-step="9"><span>9</span><div class="tooltip">Feedback Loops</div></li>
-            <li data-step="10"><span>10</span><div class="tooltip">Iteration</div></li>
+            <li data-step="9"><span>9</span><div class="tooltip">Prototyping</div></li>
+            <li data-step="10"><span>10</span><div class="tooltip">Feedback Loops</div></li>
             <li data-step="11"><span>11</span><div class="tooltip">Encapsulation</div></li>
+            <li data-step="12"><span>12</span><div class="tooltip">Debugging</div></li>
         </ul>
     </nav>
 
@@ -204,8 +206,364 @@
                 </div>
             </div>
         </section>
+
+        <!-- Step 4: Understanding Trade-offs -->
+        <section id="step4" class="step-section" data-step="4">
+            <div class="step-content">
+                <h2>4. Understanding Trade-offs</h2>
+                <p>In elevator design, as in all engineering disciplines, understanding trade-offs is crucial. Every decision balances factors like performance, maintainability, and user experience.</p>
+                
+                <div class="interactive-content">
+                    <div class="tradeoff-container">
+                        <img src="assets/images/step4.webp" alt="Trade-offs Visualization" class="step-image">
+                        
+                        <div class="quote-highlight">
+                            <blockquote>
+                                "Simplicity is about subtracting the obvious and adding the meaningful."
+                                <cite>— John Maeda</cite>
+                            </blockquote>
+                        </div>
+                        
+                        <div class="tradeoff-sliders">
+                            <div class="slider-container">
+                                <label>Velocity vs. Safety</label>
+                                <input type="range" min="1" max="100" value="50" class="trade-slider" data-tradeoff="velocity-safety">
+                                <div class="slider-labels">
+                                    <span>Higher Speed</span>
+                                    <span>Improved Safety</span>
+                                </div>
+                                <div class="slider-effect">
+                                    <div class="effect-description speed-effect">
+                                        <h4>Current Impact:</h4>
+                                        <p>Balanced approach with moderate speed and good safety features.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="slider-container">
+                                <label>Simplicity vs. Features</label>
+                                <input type="range" min="1" max="100" value="30" class="trade-slider" data-tradeoff="simplicity-features">
+                                <div class="slider-labels">
+                                    <span>Simpler Interface</span>
+                                    <span>More Features</span>
+                                </div>
+                                <div class="slider-effect">
+                                    <div class="effect-description simplicity-effect">
+                                        <h4>Current Impact:</h4>
+                                        <p>Favoring simplicity with essential features for ease of use.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="slider-container">
+                                <label>Cost vs. Reliability</label>
+                                <input type="range" min="1" max="100" value="70" class="trade-slider" data-tradeoff="cost-reliability">
+                                <div class="slider-labels">
+                                    <span>Lower Cost</span>
+                                    <span>Higher Reliability</span>
+                                </div>
+                                <div class="slider-effect">
+                                    <div class="effect-description reliability-effect">
+                                        <h4>Current Impact:</h4>
+                                        <p>Investing in quality components for better long-term reliability.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="design-outcome">
+                            <h3>Current Design Outcome</h3>
+                            <div class="outcome-visualization">
+                                <div class="elevator-representation">
+                                    <!-- Elevator representation that changes based on slider values -->
+                                    <div class="elevator-speed-indicator">
+                                        <span class="indicator-label">Speed:</span>
+                                        <span class="indicator-value">Moderate</span>
+                                    </div>
+                                    <div class="elevator-features-indicator">
+                                        <span class="indicator-label">Features:</span>
+                                        <span class="indicator-value">Essential</span>
+                                    </div>
+                                    <div class="elevator-reliability-indicator">
+                                        <span class="indicator-label">Reliability:</span>
+                                        <span class="indicator-value">High</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="content-box">
+                        <h3>Key Trade-off Principles</h3>
+                        <ul>
+                            <li><strong>No Perfect Solution:</strong> Every design decision involves compromise</li>
+                            <li><strong>Contextual Optimization:</strong> The best trade-offs depend on specific requirements</li>
+                            <li><strong>Measurable Impacts:</strong> Quantify effects of each decision when possible</li>
+                            <li><strong>User-Centered Approach:</strong> Prioritize user needs in trade-off decisions</li>
+                        </ul>
+                        <p>Understanding these trade-offs leads to more deliberate and effective design choices. By explicitly considering what we gain and lose with each decision, we create more balanced solutions.</p>
+                        
+                        <div class="action-prompt">
+                            <p>Try adjusting the sliders to see how different trade-offs affect the elevator design!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step-nav">
+                    <button class="prev-step-btn" data-prev="3">Previous: Resource Gathering</button>
+                    <button class="next-step-btn" data-next="5">Next: Planning the Architecture</button>
+                </div>
+            </div>
+        </section>
         
-        <!-- Remaining sections would be added here -->
+        <!-- Step 5: Planning the Architecture -->
+        <section id="step5" class="step-section" data-step="5">
+            <div class="step-content">
+                <h2>5. Planning the Architecture</h2>
+                <p>Creating a solid architectural foundation is essential for complex systems like elevators. This step involves designing the overall structure and relationships between components.</p>
+                
+                <div class="interactive-content">
+                    <div class="architecture-container">
+                        <img src="assets/images/step5.webp" alt="System Architecture" class="step-image">
+                        <!-- Architecture interactive elements would go here -->
+                    </div>
+                    
+                    <div class="content-box">
+                        <h3>Architectural Principles</h3>
+                        <ul>
+                            <li><strong>Separation of Concerns:</strong> Divide the system into distinct sections</li>
+                            <li><strong>Clear Interfaces:</strong> Define how components communicate</li>
+                            <li><strong>Single Responsibility:</strong> Each component handles one aspect</li>
+                            <li><strong>Modularity:</strong> Components should be interchangeable</li>
+                        </ul>
+                        <p>A well-planned architecture forms the backbone of a robust system, making it easier to maintain, extend, and troubleshoot as requirements evolve over time.</p>
+                    </div>
+                </div>
+                
+                <div class="step-nav">
+                    <button class="prev-step-btn" data-prev="4">Previous: Understanding Trade-offs</button>
+                    <button class="next-step-btn" data-next="6">Next: Deciding Abstraction Layers</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 6: Deciding Abstraction Layers -->
+        <section id="step6" class="step-section" data-step="6">
+            <div class="step-content">
+                <h2>6. Deciding Abstraction Layers</h2>
+                <p>Abstraction layers help manage complexity by hiding implementation details behind clean interfaces. For our elevator system, we'll define distinct layers that work together seamlessly.</p>
+                
+                <div class="interactive-content">
+                    <div class="abstraction-container">
+                        <img src="assets/images/step6.webp" alt="Abstraction Layers" class="step-image">
+                        <!-- Abstraction layers interactive elements would go here -->
+                    </div>
+                    
+                    <div class="content-box">
+                        <h3>Benefits of Proper Abstraction</h3>
+                        <ul>
+                            <li><strong>Reduced Complexity:</strong> Each layer has a focused purpose</li>
+                            <li><strong>Improved Maintenance:</strong> Changes remain isolated within layers</li>
+                            <li><strong>Better Testing:</strong> Layers can be tested independently</li>
+                            <li><strong>Enhanced Collaboration:</strong> Teams can work on different layers</li>
+                        </ul>
+                        <p>The right abstraction balance prevents both over-engineering and excessive coupling, creating a system that's both sophisticated and manageable.</p>
+                    </div>
+                </div>
+                
+                <div class="step-nav">
+                    <button class="prev-step-btn" data-prev="5">Previous: Planning the Architecture</button>
+                    <button class="next-step-btn" data-next="7">Next: Open/Closed Principle</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 7: Open/Closed Principle -->
+        <section id="step7" class="step-section" data-step="7">
+            <div class="step-content">
+                <h2>7. Open/Closed Principle</h2>
+                <p>The Open/Closed principle states that software should be open for extension but closed for modification. Let's explore how this applies to elevator design.</p>
+                
+                <div class="interactive-content">
+                    <div class="open-closed-container">
+                        <img src="assets/images/step7.webp" alt="Open/Closed Principle" class="step-image">
+                        <!-- Open/Closed interactive elements would go here -->
+                    </div>
+                    
+                    <div class="content-box">
+                        <h3>Applying the Open/Closed Principle</h3>
+                        <ul>
+                            <li><strong>Extension Points:</strong> Design components with future additions in mind</li>
+                            <li><strong>Clean Interfaces:</strong> Define stable interfaces that won't need modification</li>
+                            <li><strong>Plug-in Architecture:</strong> Allow new features to be added without changing core code</li>
+                            <li><strong>Configuration over Modification:</strong> Make behavior adjustable without code changes</li>
+                        </ul>
+                        <p>Following this principle allows our elevator system to evolve with new requirements while maintaining stability in its core functionality.</p>
+                    </div>
+                </div>
+                
+                <div class="step-nav">
+                    <button class="prev-step-btn" data-prev="6">Previous: Deciding Abstraction Layers</button>
+                    <button class="next-step-btn" data-next="8">Next: Breaking Down the Problem</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 8: Breaking Down the Problem -->
+        <section id="step8" class="step-section" data-step="8">
+            <div class="step-content">
+                <h2>8. Breaking Down the Problem</h2>
+                <p>Complex systems become more manageable when decomposed into smaller, focused components. This step explores how to divide our elevator system into discrete, understandable parts.</p>
+                
+                <div class="interactive-content">
+                    <div class="breakdown-container">
+                        <img src="assets/images/step8.webp" alt="Problem Breakdown" class="step-image">
+                        <!-- Problem breakdown interactive elements would go here -->
+                    </div>
+                    
+                    <div class="content-box">
+                        <h3>Effective Problem Decomposition</h3>
+                        <ul>
+                            <li><strong>Functional Separation:</strong> Group related functionality together</li>
+                            <li><strong>Minimize Dependencies:</strong> Reduce connections between components</li>
+                            <li><strong>Clear Boundaries:</strong> Define explicit interfaces between parts</li>
+                            <li><strong>Balanced Granularity:</strong> Find the right level of component size</li>
+                        </ul>
+                        <p>Breaking down complex problems allows teams to tackle challenges in parallel, simplifies testing, and makes the overall system more maintainable.</p>
+                    </div>
+                </div>
+                
+                <div class="step-nav">
+                    <button class="prev-step-btn" data-prev="7">Previous: Open/Closed Principle</button>
+                    <button class="next-step-btn" data-next="9">Next: Prototyping</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 9: Prototyping -->
+        <section id="step9" class="step-section" data-step="9">
+            <div class="step-content">
+                <h2>9. Prototyping</h2>
+                <p>Before committing to a full implementation, prototyping allows us to test assumptions, identify issues early, and refine our design approach.</p>
+                
+                <div class="interactive-content">
+                    <div class="prototype-container">
+                        <img src="assets/images/step9.webp" alt="Prototyping" class="step-image">
+                        <!-- Prototyping interactive elements would go here -->
+                    </div>
+                    
+                    <div class="content-box">
+                        <h3>Prototyping Benefits</h3>
+                        <ul>
+                            <li><strong>Risk Reduction:</strong> Identify issues before full implementation</li>
+                            <li><strong>User Validation:</strong> Get early feedback on usability</li>
+                            <li><strong>Technical Feasibility:</strong> Verify that the approach works in practice</li>
+                            <li><strong>Refined Requirements:</strong> Clarify needs through concrete examples</li>
+                        </ul>
+                        <p>Prototyping bridges the gap between conceptual design and implementation, providing valuable insights that paper designs alone cannot reveal.</p>
+                    </div>
+                </div>
+                
+                <div class="step-nav">
+                    <button class="prev-step-btn" data-prev="8">Previous: Breaking Down the Problem</button>
+                    <button class="next-step-btn" data-next="10">Next: Feedback Loops</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 10: Feedback Loops -->
+        <section id="step10" class="step-section" data-step="10">
+            <div class="step-content">
+                <h2>10. Feedback Loops</h2>
+                <p>Continuous improvement relies on effective feedback loops. In elevator design, these loops help refine the system based on real-world performance and user experience.</p>
+                
+                <div class="interactive-content">
+                    <div class="feedback-container">
+                        <img src="assets/images/step10.webp" alt="Feedback Loops" class="step-image">
+                        <!-- Feedback loops interactive elements would go here -->
+                        <div class="feedback-loop-animation"></div>
+                    </div>
+                    
+                    <div class="content-box">
+                        <h3>Implementing Effective Feedback</h3>
+                        <ul>
+                            <li><strong>Multiple Sources:</strong> Gather feedback from users, operators, and sensors</li>
+                            <li><strong>Quick Cycles:</strong> Implement short feedback loops for rapid improvement</li>
+                            <li><strong>Data-Driven:</strong> Base decisions on measurable performance metrics</li>
+                            <li><strong>Continuous Learning:</strong> Build a culture of ongoing optimization</li>
+                        </ul>
+                        <p>Well-designed feedback loops create a self-improving system that gets better over time through systematic learning and adaptation.</p>
+                    </div>
+                </div>
+                
+                <div class="step-nav">
+                    <button class="prev-step-btn" data-prev="9">Previous: Prototyping</button>
+                    <button class="next-step-btn" data-next="11">Next: Encapsulation</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 11: Encapsulation -->
+        <section id="step11" class="step-section" data-step="11">
+            <div class="step-content">
+                <h2>11. Encapsulation</h2>
+                <p>Encapsulation hides internal implementation details and exposes only what's necessary through well-defined interfaces. This principle is crucial for building maintainable systems.</p>
+                
+                <div class="interactive-content">
+                    <div class="encapsulation-container">
+                        <img src="assets/images/step11.webp" alt="Encapsulation" class="step-image">
+                        <!-- Encapsulation interactive elements would go here -->
+                    </div>
+                    
+                    <div class="content-box">
+                        <h3>Encapsulation Benefits</h3>
+                        <ul>
+                            <li><strong>Information Hiding:</strong> Internal complexity remains hidden</li>
+                            <li><strong>Reduced Coupling:</strong> Components interact through stable interfaces</li>
+                            <li><strong>Improved Testing:</strong> Components can be tested in isolation</li>
+                            <li><strong>Enhanced Security:</strong> Sensitive operations are protected</li>
+                        </ul>
+                        <p>Proper encapsulation creates a system where components can evolve independently, making maintenance easier and reducing the risk of unintended consequences.</p>
+                    </div>
+                </div>
+                
+                <div class="step-nav">
+                    <button class="prev-step-btn" data-prev="10">Previous: Feedback Loops</button>
+                    <button class="next-step-btn" data-next="12">Next: Debugging</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 12: Debugging -->
+        <section id="step12" class="step-section" data-step="12">
+            <div class="step-content">
+                <h2>12. Debugging</h2>
+                <p>Even with careful design, all systems will encounter issues. Effective debugging processes help identify and resolve problems efficiently while maintaining system integrity.</p>
+                
+                <div class="interactive-content">
+                    <div class="debugging-container">
+                        <img src="assets/images/step12.webp" alt="Debugging" class="step-image">
+                        <!-- Debugging interactive elements would go here -->
+                    </div>
+                    
+                    <div class="content-box">
+                        <h3>Debugging Strategies</h3>
+                        <ul>
+                            <li><strong>Systematic Approach:</strong> Use methodical troubleshooting processes</li>
+                            <li><strong>Observability:</strong> Build in logging, monitoring, and diagnostics</li>
+                            <li><strong>Root Cause Analysis:</strong> Address underlying issues, not just symptoms</li>
+                            <li><strong>Regression Prevention:</strong> Add tests to prevent recurring problems</li>
+                        </ul>
+                        <p>A robust debugging process transforms errors from frustrating roadblocks into opportunities for system improvement and deeper understanding.</p>
+                    </div>
+                </div>
+                
+                <div class="step-nav">
+                    <button class="prev-step-btn" data-prev="11">Previous: Encapsulation</button>
+                    <button class="next-step-btn" data-next="1">Restart Journey</button>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Citations & Resources Section -->
@@ -217,41 +575,4 @@
                 <ul>
                     <li><a href="https://lawsofsimplicity.com/" target="_blank">John Maeda's "Laws of Simplicity"</a></li>
                     <li><a href="https://www.youtube.com/watch?v=GmXPwRNIrAU" target="_blank">"A Philosophy of Software Design" lecture by John Ousterhout</a></li>
-                    <li><a href="https://bytebytego.com/guides/10-good-coding-principles-to-improve-code-quality/" target="_blank">ByteByteGo's coding principles</a></li>
-                </ul>
-            </div>
-            
-            <div class="resource-category">
-                <h3>Technical Resources</h3>
-                <ul>
-                    <li><a href="https://www.asme.org/codes-standards/find-codes-standards/a17-1-csa-b44-safety-code-elevators-escalators" target="_blank">Elevator design standards (ASME A17.1)</a></li>
-                    <li><a href="https://refactoring.guru/design-patterns" target="_blank">Design patterns resource</a></li>
-                    <li><a href="https://www.diagrams.net/" target="_blank">UML diagramming tools</a></li>
-                </ul>
-            </div>
-            
-            <div class="resource-category">
-                <h3>Conceptual Resources</h3>
-                <ul>
-                    <li><a href="https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle" target="_blank">Open/Closed Principle explanation</a></li>
-                    <li><a href="https://en.wikipedia.org/wiki/Abstraction_(computer_science)" target="_blank">Abstraction in computing</a></li>
-                    <li><a href="https://www.nngroup.com/articles/feedback-loops-ux/" target="_blank">Nielsen Norman Group on feedback loops</a></li>
-                    <li><a href="https://github.blog/developer-skills/career-growth/how-to-get-in-the-flow-while-coding-and-why-its-important/" target="_blank">GitHub Blog on flow state</a></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 Elevator Design Journey</p>
-            <p>An interactive exploration of design principles</p>
-        </div>
-    </footer>
-
-    <script src="js/main.js"></script>
-    <script src="js/animations.js"></script>
-    <script src="js/interactions.js"></script>
-</body>
-</html> 
+                    <li><a href="https://bytebytego.com/guides/10-good-coding-principles-to-improve-code-quality/" target="_blank">ByteByteGo
