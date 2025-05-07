@@ -108,7 +108,63 @@
                         <div class="scenario-selector">
                             <button class="scenario-btn active" data-scenario="normal">Normal Use</button>
                             <button class="scenario-btn" data-scenario="rush">Rush Hour</button>
-@@ -168,7 +168,7 @@
+                            <button class="scenario-btn" data-scenario="maintenance">Maintenance</button>
+                        </div>
+
+                        <div class="scenario-details" id="normal-scenario">
+                            <h4>Normal Operation</h4>
+                            <p>Single passenger entering and exiting the elevator</p>
+                            <ul>
+                                <li>Wait time: 0-30 seconds</li>
+                                <li>Door open time: 5 seconds</li>
+                                <li>Travel speed: Normal</li>
+                            </ul>
+                        </div>
+
+                        <div class="scenario-details" id="rush-scenario" style="display: none;">
+                            <h4>Rush Hour</h4>
+                            <p>Multiple passengers with varying destinations</p>
+                            <ul>
+                                <li>Wait time: 1-3 minutes</li>
+                                <li>Door open time: 8 seconds</li>
+                                <li>Travel speed: Normal</li>
+                                <li>Requires optimized floor sequencing</li>
+                            </ul>
+                        </div>
+
+                        <div class="scenario-details" id="maintenance-scenario" style="display: none;">
+                            <h4>Maintenance Mode</h4>
+                            <p>Technicians servicing the elevator system</p>
+                            <ul>
+                                <li>System override enabled</li>
+                                <li>Safety locks engaged</li>
+                                <li>Diagnostic mode active</li>
+                                <li>Regular operation suspended</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="content-box">
+                        <h3>Why Scenarios Matter</h3>
+                        <p>Scenarios help identify edge cases, requirements, and potential problems early in the design process. They provide concrete examples that guide decision-making.</p>
+                        <blockquote>
+                            "Working through specific examples reveals insights that abstract thinking often misses."
+                        </blockquote>
+                    </div>
+                </div>
+
+                <div class="step-nav">
+                    <button class="prev-step-btn" data-prev="1">Previous: Setting a Base Case</button>
+                    <button class="next-step-btn" data-next="3">Next: Resource Gathering</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 3: Resource Gathering -->
+        <section id="step3" class="step-section" data-step="3">
+            <div class="step-content">
+                <h2>3. Resource Gathering</h2>
+                <p>Before diving into detailed design, we need to collect resources, knowledge, and materials that will inform our elevator system development.</p>
 
                 <div class="interactive-content">
                     <div class="resource-container">
@@ -116,9 +172,86 @@
                         <div class="draggable-resources">
                             <div class="resource-item" draggable="true" data-resource="lighting">Lighting</div>
                             <div class="resource-item" draggable="true" data-resource="handrail">Handrail</div>
-@@ -254,4 +254,4 @@
+                            <div class="resource-item" draggable="true" data-resource="wood">Wood</div>
+                            <div class="resource-item" draggable="true" data-resource="touchless">Touchless</div>
+                            <div class="resource-item" draggable="true" data-resource="mirror">Mirror</div>
+                            <div class="resource-item" draggable="true" data-resource="display">Display</div>
+                        </div>
+
+                        <div class="resource-dropzone">
+                            <h4>Drag resources to include in your design</h4>
+                            <div class="selected-resources"></div>
+                        </div>
+                    </div>
+
+                    <div class="content-box">
+                        <h3>Resource Categories</h3>
+                        <ul>
+                            <li><strong>Knowledge Resources:</strong> Engineering principles, mechanics, materials science</li>
+                            <li><strong>Technical Resources:</strong> CAD software, simulation tools, testing equipment</li>
+                            <li><strong>Physical Resources:</strong> Materials, components, manufacturing capabilities</li>
+                            <li><strong>Human Resources:</strong> Engineers, designers, safety experts</li>
+                        </ul>
+                        <blockquote>
+                            "Gathering the right resources upfront prevents costly revisions later."
+                        </blockquote>
+                    </div>
+                </div>
+
+                <div class="step-nav">
+                    <button class="prev-step-btn" data-prev="2">Previous: Example Scenarios</button>
+                    <button class="next-step-btn" data-next="4">Next: Understanding Trade-offs</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Remaining sections would be added here -->
+    </main>
+
+    <!-- Citations & Resources Section -->
+    <section id="citations" class="citations-section">
+        <h2>Citations & Resources</h2>
+        <div class="resources-container">
+            <div class="resource-category">
+                <h3>Design Principles</h3>
+                <ul>
+                    <li><a href="https://lawsofsimplicity.com/" target="_blank">John Maeda's "Laws of Simplicity"</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=GmXPwRNIrAU" target="_blank">"A Philosophy of Software Design" lecture by John Ousterhout</a></li>
+                    <li><a href="https://bytebytego.com/guides/10-good-coding-principles-to-improve-code-quality/" target="_blank">ByteByteGo's coding principles</a></li>
+                </ul>
+            </div>
+
+            <div class="resource-category">
+                <h3>Technical Resources</h3>
+                <ul>
+                    <li><a href="https://www.asme.org/codes-standards/find-codes-standards/a17-1-csa-b44-safety-code-elevators-escalators" target="_blank">Elevator design standards (ASME A17.1)</a></li>
+                    <li><a href="https://refactoring.guru/design-patterns" target="_blank">Design patterns resource</a></li>
+                    <li><a href="https://www.diagrams.net/" target="_blank">UML diagramming tools</a></li>
+                </ul>
+            </div>
+
+            <div class="resource-category">
+                <h3>Conceptual Resources</h3>
+                <ul>
+                    <li><a href="https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle" target="_blank">Open/Closed Principle explanation</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Abstraction_(computer_science)" target="_blank">Abstraction in computing</a></li>
+                    <li><a href="https://www.nngroup.com/articles/feedback-loops-ux/" target="_blank">Nielsen Norman Group on feedback loops</a></li>
+                    <li><a href="https://github.blog/developer-skills/career-growth/how-to-get-in-the-flow-while-coding-and-why-its-important/" target="_blank">GitHub Blog on flow state</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Elevator Design Journey</p>
+            <p>An interactive exploration of design principles</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/interactions.js"></script>
 </body>
-</html> 
 </html> 
