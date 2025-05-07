@@ -179,7 +179,8 @@ function setupInteractiveElements() {
     // Step 3: Draggable resources
     setupDraggableResources();
     
-    // Additional interactive elements for other steps would be set up here
+    // Add image loading handling
+    setupImageLoading();
 }
 
 /**
@@ -321,6 +322,38 @@ function setupDraggableResources() {
             resourceItem.appendChild(removeBtn);
             selectedResources.appendChild(resourceItem);
         }
+    });
+}
+
+/**
+ * Set up image loading and error handling
+ */
+function setupImageLoading() {
+    const images = document.querySelectorAll('.step-image');
+    
+    images.forEach(img => {
+        // Add loading state
+        img.addEventListener('loadstart', () => {
+            img.style.opacity = '0';
+        });
+        
+        // Handle successful load
+        img.addEventListener('load', () => {
+            img.style.opacity = '1';
+            img.style.transition = 'opacity 0.3s ease-in-out';
+        });
+        
+        // Handle load error
+        img.addEventListener('error', () => {
+            console.error(`Failed to load image: ${img.src}`);
+            // Try alternative path
+            const currentSrc = img.src;
+            if (currentSrc.startsWith('/AMEfinal/')) {
+                img.src = currentSrc.replace('/AMEfinal/', './');
+            } else if (currentSrc.startsWith('./')) {
+                img.src = currentSrc.replace('./', '/AMEfinal/');
+            }
+        });
     });
 }
 

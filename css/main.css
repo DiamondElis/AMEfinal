@@ -456,4 +456,34 @@ footer {
     100% {
         box-shadow: 0 0 0 0 rgba(57, 194, 215, 0);
     }
+}
+
+.feedback-container {
+    width: 100%;
+    min-height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(26, 75, 105, 0.4);
+    border: 1px solid var(--accent-teal);
+    border-radius: 8px;
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.feedback-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-container img:not([src]) {
+    visibility: hidden;
+}
+
+.feedback-container img[src=""] {
+    visibility: hidden;
 } 
