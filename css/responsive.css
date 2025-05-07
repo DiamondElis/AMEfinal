@@ -1,0 +1,239 @@
+/* responsive.css - Responsive styling for Elevator Design Journey */
+
+/* Large Desktops (1200px and above) */
+@media (min-width: 1200px) {
+    .step-content {
+        padding: 0 var(--spacing-xl);
+    }
+    
+    h1 {
+        font-size: 4rem;
+    }
+    
+    h2 {
+        font-size: 3rem;
+    }
+}
+
+/* Regular Desktops (992px - 1199px) */
+@media (max-width: 1199px) {
+    h1 {
+        font-size: 3.2rem;
+    }
+    
+    .interactive-content {
+        gap: var(--spacing-md);
+    }
+}
+
+/* Tablets (768px - 991px) */
+@media (max-width: 991px) {
+    h1 {
+        font-size: 2.8rem;
+    }
+    
+    h2 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    
+    .progress-tracker li span {
+        width: 25px;
+        height: 25px;
+        font-size: 0.8rem;
+    }
+    
+    .step-section {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+}
+
+/* Large Mobile Devices (576px - 767px) */
+@media (max-width: 767px) {
+    .progress-nav {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        padding: var(--spacing-sm);
+    }
+    
+    .progress-tracker {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: var(--spacing-xs);
+    }
+    
+    h1 {
+        font-size: 2.4rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .cta-button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+    
+    .interactive-content {
+        flex-direction: column;
+    }
+    
+    .step-nav {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .prev-step-btn,
+    .next-step-btn {
+        width: 100%;
+    }
+    
+    .resources-container {
+        flex-direction: column;
+    }
+}
+
+/* Small Mobile Devices (up to 575px) */
+@media (max-width: 575px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-section {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+    
+    .step-section {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+    
+    .progress-tracker li {
+        margin: 0 0.2rem;
+    }
+    
+    .progress-tracker li span {
+        width: 22px;
+        height: 22px;
+        font-size: 0.7rem;
+    }
+    
+    .tooltip {
+        display: none;
+    }
+    
+    .scenario-selector {
+        flex-wrap: wrap;
+    }
+    
+    .scenario-btn {
+        flex: 1 1 100%;
+    }
+    
+    .blueprint-container,
+    .scenario-container,
+    .resource-container,
+    .content-box {
+        padding: var(--spacing-sm);
+    }
+    
+    .citations-section {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+}
+
+/* Handle extremely small screens */
+@media (max-width: 360px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .progress-tracker {
+        justify-content: center;
+    }
+    
+    .progress-tracker li span {
+        width: 20px;
+        height: 20px;
+        font-size: 0.6rem;
+    }
+}
+
+/* Height-based media queries */
+@media (max-height: 700px) {
+    .hero-section {
+        padding: var(--spacing-md) var(--spacing-md);
+    }
+    
+    h1 {
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .hero-content p {
+        margin-bottom: var(--spacing-md);
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .progress-nav,
+    .hero-section,
+    .step-nav,
+    .interactive-content {
+        display: none;
+    }
+    
+    .step-section {
+        page-break-after: always;
+        min-height: auto;
+        padding: 1cm;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: black;
+    }
+    
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+    
+    .content-box {
+        border: 1px solid #ccc;
+        background: white;
+    }
+}
+
+/* Dark mode preference */
+@media (prefers-color-scheme: dark) {
+    /* Already dark themed, but could adjust specific elements if needed */
+    .cta-button {
+        color: var(--primary-blue);
+    }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+} 

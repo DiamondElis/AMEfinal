@@ -1,0 +1,240 @@
+/* tradeoffs.css - Styles for the Trade-offs section (Step 4) */
+
+/* Container for trade-off interactive elements */
+.tradeoff-container {
+    position: relative;
+    background-color: rgba(26, 75, 105, 0.4);
+    border: 1px solid var(--accent-teal);
+    border-radius: 8px;
+    padding: var(--spacing-md);
+    flex: 1 1 600px;
+}
+
+/* Quote highlight */
+.quote-highlight {
+    position: relative;
+    margin: var(--spacing-md) 0;
+    text-align: center;
+}
+
+.quote-highlight blockquote {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: var(--text-light);
+    text-shadow: 0 0 10px rgba(57, 194, 215, 0.5);
+    max-width: 80%;
+    margin: 0 auto;
+    border-left: none;
+    padding: var(--spacing-md);
+    background-color: transparent;
+}
+
+.quote-highlight cite {
+    display: block;
+    margin-top: var(--spacing-sm);
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--highlight-orange);
+}
+
+/* Trade-off sliders */
+.tradeoff-sliders {
+    margin: var(--spacing-lg) 0;
+}
+
+.slider-container {
+    margin-bottom: var(--spacing-md);
+    background-color: rgba(12, 44, 62, 0.6);
+    padding: var(--spacing-sm);
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+}
+
+.slider-container:hover {
+    box-shadow: 0 0 15px rgba(57, 194, 215, 0.4);
+}
+
+.slider-container label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 600;
+    color: var(--accent-teal);
+}
+
+.trade-slider {
+    width: 100%;
+    height: 6px;
+    -webkit-appearance: none;
+    background: linear-gradient(to right, 
+        var(--accent-teal) 0%, 
+        var(--accent-teal) 50%, 
+        var(--highlight-orange) 50%, 
+        var(--highlight-orange) 100%);
+    outline: none;
+    border-radius: 3px;
+    margin: var(--spacing-sm) 0;
+}
+
+.trade-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--text-light);
+    border: 2px solid var(--accent-teal);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.trade-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(57, 194, 215, 0.8);
+}
+
+.trade-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--text-light);
+    border: 2px solid var(--accent-teal);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.trade-slider::-moz-range-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(57, 194, 215, 0.8);
+}
+
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    opacity: 0.8;
+}
+
+.slider-effect {
+    margin-top: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    border: 1px dashed rgba(57, 194, 215, 0.3);
+    border-radius: 4px;
+}
+
+.effect-description h4 {
+    font-size: 0.9rem;
+    color: var(--accent-teal);
+    margin-bottom: var(--spacing-xs);
+}
+
+.effect-description p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* Design outcome visualization */
+.design-outcome {
+    margin-top: var(--spacing-lg);
+    background-color: rgba(12, 44, 62, 0.6);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(57, 194, 215, 0.2);
+}
+
+.design-outcome h3 {
+    text-align: center;
+    color: var(--accent-teal);
+    margin-bottom: var(--spacing-md);
+}
+
+.outcome-visualization {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+.elevator-representation {
+    border: 2px solid var(--accent-teal);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    min-width: 250px;
+    background-color: rgba(26, 75, 105, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.elevator-speed-indicator,
+.elevator-features-indicator,
+.elevator-reliability-indicator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 4px;
+    background-color: rgba(12, 44, 62, 0.7);
+}
+
+.indicator-label {
+    font-weight: 600;
+    color: var(--accent-teal);
+}
+
+.indicator-value {
+    color: var(--text-light);
+}
+
+/* Action prompt */
+.action-prompt {
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-sm);
+    background-color: rgba(230, 166, 77, 0.15);
+    border-left: 3px solid var(--highlight-orange);
+    border-radius: 0 4px 4px 0;
+}
+
+.action-prompt p {
+    margin-bottom: 0;
+    font-weight: 600;
+    color: var(--highlight-orange);
+}
+
+/* Animation for sliders and outcome changes */
+@keyframes updateValue {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.update-animation {
+    animation: updateValue 0.5s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .quote-highlight blockquote {
+        font-size: 1.2rem;
+        max-width: 95%;
+    }
+    
+    .tradeoff-sliders {
+        margin: var(--spacing-md) 0;
+    }
+    
+    .outcome-visualization {
+        min-height: 150px;
+    }
+}
+
+@media (max-width: 575px) {
+    .quote-highlight blockquote {
+        font-size: 1rem;
+    }
+    
+    .elevator-representation {
+        min-width: auto;
+        width: 100%;
+    }
+} 
