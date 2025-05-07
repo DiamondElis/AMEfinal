@@ -63,7 +63,7 @@ function setupNavigation() {
         const currentStep = getCurrentStep();
         
         if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-            if (currentStep < 11) {
+            if (currentStep < 12) {
                 navigateToStep(currentStep + 1);
             }
         } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
@@ -152,7 +152,7 @@ function showActiveSection() {
     // Check if there's a step in the URL hash
     if (window.location.hash && window.location.hash.includes('step')) {
         const step = parseInt(window.location.hash.replace('#step', ''));
-        if (!isNaN(step) && step >= 1 && step <= 11) {
+        if (!isNaN(step) && step >= 1 && step <= 12) {
             navigateToStep(step);
             return;
         }
@@ -178,6 +178,9 @@ function setupInteractiveElements() {
     
     // Step 3: Draggable resources
     setupDraggableResources();
+    
+    // Step 4: Trade-off sliders
+    setupTradeoffSliders();
     
     // Additional interactive elements for other steps would be set up here
 }
@@ -325,6 +328,18 @@ function setupDraggableResources() {
 }
 
 /**
+ * Set up trade-off sliders for Step 4
+ * Simplified version - full implementation in tradeoffs.js
+ */
+function setupTradeoffSliders() {
+    // This is a placeholder - the actual implementation is in tradeoffs.js
+    // This function is here to ensure all interactive elements are initialized in one place
+    if (typeof window.initTradeoffSliders === 'function') {
+        window.initTradeoffSliders();
+    }
+}
+
+/**
  * Initialize GSAP animations
  */
 function initAnimations() {
@@ -406,4 +421,4 @@ function animateStepSections() {
             }
         });
     });
-} 
+}
