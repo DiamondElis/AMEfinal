@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/tradeoffs.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Roboto:wght@300;400&family=Source+Code+Pro&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -25,7 +24,104 @@
             <li data-step="6"><span>6</span><div class="tooltip">Abstraction Layers</div></li>
             <li data-step="7"><span>7</span><div class="tooltip">Open/Closed</div></li>
             <li data-step="8"><span>8</span><div class="tooltip">Breaking Down</div></li>
-            <li data-step="9"><span>9</span><div class="tooltip">Prototyping</div></li>
-            <li data-step="10"><span>10</span><div class="tooltip">Feedback Loops</div></li>
+            <li data-step="9"><span>9</span><div class="tooltip">Feedback Loops</div></li>
+            <li data-step="10"><span>10</span><div class="tooltip">Iteration</div></li>
             <li data-step="11"><span>11</span><div class="tooltip">Encapsulation</div></li>
-            <li data-step="12"><span>12</span><div class="tooltip">Debugging</div></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1>The Elevator Design Journey</h1>
+            <p>An interactive exploration of software design principles through the lens of elevator engineering</p>
+            <button class="cta-button" id="start-journey">Begin Journey</button>
+        </div>
+        <div class="elevator-model">
+            <!-- 3D elevator model will be added with JS -->
+        </div>
+    </section>
+
+    <!-- Step Sections -->
+    <main class="steps-container">
+        <!-- Step 1: Setting a Base Case -->
+        <section id="step1" class="step-section" data-step="1">
+            <div class="step-content">
+                <h2>1. Setting a Base Case</h2>
+                <p>Every design journey begins with establishing fundamental principles. For our elevator, we need to define the basic functionality and constraints.</p>
+
+                <div class="interactive-content">
+                    <div class="blueprint-container">
+                        <img src="assets/images/step1.jpg" alt="Elevator Blueprint" class="step-image">
+                        <img src="assets/images/step1.webp" alt="Elevator Blueprint" class="step-image">
+                        <div class="hotspot" data-target="door">
+                            <span class="hotspot-dot"></span>
+                            <div class="hotspot-content">
+                                <h4>Door</h4>
+                                <p>Entry point for passengers, must meet safety standards</p>
+                            </div>
+                        </div>
+                        <div class="hotspot" data-target="pulley">
+                            <span class="hotspot-dot"></span>
+                            <div class="hotspot-content">
+                                <h4>Pulley</h4>
+                                <p>Core mechanism for vertical movement</p>
+                            </div>
+                        </div>
+                        <div class="hotspot" data-target="control-panel">
+                            <span class="hotspot-dot"></span>
+                            <div class="hotspot-content">
+                                <h4>Control Panel</h4>
+                                <p>Interface for user interaction</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-box">
+                        <h3>Key Principles</h3>
+                        <ul>
+                            <li>Define core functionality (vertical transport)</li>
+                            <li>Establish basic constraints (weight, speed, size)</li>
+                            <li>Identify essential components</li>
+                            <li>Create a minimal working model</li>
+                        </ul>
+                        <blockquote>
+                            "Starting with a simple base case helps conceptualize the problem space and gives you a foundation to build upon."
+                        </blockquote>
+                    </div>
+                </div>
+
+                <div class="step-nav">
+                    <button class="next-step-btn" data-next="2">Next: Drawing Example Scenarios</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 2: Drawing Out Simple Example Scenarios -->
+        <section id="step2" class="step-section" data-step="2">
+            <div class="step-content">
+                <h2>2. Drawing Out Simple Example Scenarios</h2>
+                <p>After establishing a base case, we need to explore different use cases to understand how our elevator system will behave in various scenarios.</p>
+
+                <div class="interactive-content">
+                    <div class="scenario-container">
+                        <img src="assets/images/step2.jpg" alt="Elevator Scenarios" class="step-image">
+                        <img src="assets/images/step2.webp" alt="Elevator Scenarios" class="step-image">
+                        <div class="scenario-selector">
+                            <button class="scenario-btn active" data-scenario="normal">Normal Use</button>
+                            <button class="scenario-btn" data-scenario="rush">Rush Hour</button>
+@@ -168,7 +168,7 @@
+
+                <div class="interactive-content">
+                    <div class="resource-container">
+                        <img src="assets/images/step3.jpg" alt="Resource Gathering" class="step-image">
+                        <img src="assets/images/step3.webp" alt="Resource Gathering" class="step-image">
+                        <div class="draggable-resources">
+                            <div class="resource-item" draggable="true" data-resource="lighting">Lighting</div>
+                            <div class="resource-item" draggable="true" data-resource="handrail">Handrail</div>
+@@ -254,4 +254,4 @@
+    <script src="js/animations.js"></script>
+    <script src="js/interactions.js"></script>
+</body>
+</html> 
+</html> 
